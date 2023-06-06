@@ -1,0 +1,22 @@
+<h3 class="text-primary">Our Cources</h3>
+
+
+<table class="table table-striped table-hover  table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Cource ID</th>
+            <th>Cource Name</th>
+            <th>Trainer</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr (click)="onSelect(cource)" *ngFor="let cource of cources">
+            <td>{{cource.cid}}</td>
+            <td>{{cource.cname}}</td>
+            <td>{{cource.trainer}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <router-outlet></router-outlet> -->

@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Anurag</a>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="home" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="about" routerLinkActive="active">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="services" routerLinkActive="active">Services</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="cources" routerLinkActive="active" id="navbardrop"
+                        data-toggle="dropdown">
+                        cources
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" routerLink="java" routerLinkActive="active">Java</a>
+                        <a class="dropdown-item" routerLink="javascript" routerLinkActive="active">JavaScript</a>
+                        <a class="dropdown-item" routerLink="python" routerLinkActive="active">Python</a>
+                        <a class="dropdown-item" routerLink="nodejs" routerLinkActive="active">NodeJs</a>
+                        <a class="dropdown-item" routerLink="express" routerLinkActive="active">ExpressJs</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="contant" routerLinkActive="active">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
