@@ -1,0 +1,157 @@
+<div class="container m-3 p-3">
+
+    <!-- <h1>{{title}}</h1> -->
+
+    <!--<== Structural Directives ==>-->
+
+    <!-- *ngIf  -->
+
+    <!-- <div *ngIf="true">
+        <h1 class="text-success">Login Success</h1>
+    </div> -->
+
+
+    <!-- <div *ngIf="username=='root' && password=='root'">
+        <h1 class="text-success">Login Success</h1>
+    </div> -->
+
+
+    <!-- <ng-template [ngIf]="true">
+        <div>
+            <h1 class="text-success">Login Success</h1>
+        </div>
+    </ng-template> -->
+
+
+
+    <!-- [hidden] -->
+    <!-- <div [hidden]="username=='root' && password=='root1'">
+        <p>Check your username or password again...</p>
+    </div> -->
+
+
+    <!-- *ngIf else  -->
+    <!-- <div *ngIf="username=='root' && password=='root'; else elseBlock">
+        <h1 class="text-success">Login Success!</h1>
+    </div>
+    <ng-template #elseBlock>
+        <h1 class="text-danger">Login Failed!</h1>
+    </ng-template> -->
+
+
+    <!-- *ngIf then else  -->
+    <!-- <div *ngIf="username=='root1' && password=='root';then thenBlock else elseBlock"></div>
+
+    <ng-template #thenBlock>
+        <h1 class="text-success">Login Success!</h1>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <h1 class="text-danger">Login Failed!</h1>
+    </ng-template> -->
+
+
+    <!-- *ngFor -->
+    <!-- <ul class="list-group" *ngFor="let color of colors;index as i">
+        <li class="list-group-item">{{color}}</li>
+        <li>{{colors[i]}}</li>
+    </ul> -->
+
+    <!-- <ng-template ngFor let-color [ngForOf]="colors" let-i="index">
+        <li>{{color}}</li>
+    </ng-template> -->
+
+    <!-- <br><br>
+
+    <h2 class="text-success">Displaying Emloyees Details </h2>
+    <hr>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Employee_ID</th>
+                <th>Employee_NAME</th>
+                <th>Employee_SALARY</th>
+                <th>Employee_CITY</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.eid}}</td>
+                <td>{{employee.ename | uppercase}}</td>
+                <td>{{employee.esalary | currency:'INR'}}</td>
+                <td>{{employee.ecity}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+
+
+    <!-- ngSwitch -->
+    <!-- <div [ngSwitch]="technology">
+        <div *ngSwitchCase="'Python'">
+            <h1 class="text-primary">{{name}} Expert in {{technology}}</h1>
+        </div>
+        <div *ngSwitchCase="'Java'">
+            <h1 class="text-danger">{{name}} Expert in {{technology}}</h1>
+        </div>
+        <div *ngSwitchCase="'JavaScript'">
+            <h1 class="text-info">{{name}} Expert in {{technology}}</h1>
+        </div>
+        <div *ngSwitchCase="'TypeScript'">
+            <h1 class="text-primary">{{name}} Expert in {{technology}}</h1>
+        </div>
+        <div *ngSwitchDefault>
+            <h1 class="text-warning">{{name}} Expert in {{technology}}</h1>
+        </div>
+     </div> -->
+
+
+
+    <!--<== Attribute Directives ==>-->
+
+    <!-- ngModel -->
+
+    <!-- <div class="form-group">
+        <label>Username</label>
+        <input [(ngModel)]='username' class="form-control">
+    </div> -->
+
+
+    <!-- <div class="form-group">
+        <label> Country</label>
+        <select [(ngModel)]='countries' class="form-control">
+
+            <option value="first" selected>Select Your Country</option>
+
+            <option value="second" *ngFor="let country of countries">{{country}}</option>
+
+        </select>
+    </div> -->
+
+    <!-- <div class="form-group">
+        <label> Country</label>
+        <select [(ngModel)]='country' class="form-control">
+
+            <option selected>Select Your Country</option>
+
+            <option *ngFor="let country of countries">{{country}}</option>
+
+        </select>
+    </div>
+
+    <h1 class="text-primary">Username: {{username}}</h1>
+    <h1 class="text-primary">Country: {{country}}</h1> -->
+
+
+     <!-- ngClass (secction-6) -->
+
+     <h1 [ngClass]="myClasses">{{title}}</h1>
+
+
+     <!-- ngStyle-->
+     <h1 [ngStyle]="myStyle">{{title}}</h1>
+
+     <!-- Custom dDirective -->
+     <h1 appText>{{title}}</h1>
+
+</div>
