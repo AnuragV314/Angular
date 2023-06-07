@@ -1,0 +1,27 @@
+[
+    {
+        "cid": 1,
+        "cname": "Java",
+        "trainer": "Anurag"
+    },
+    {
+        "cid": 2,
+        "cname": "Python",
+        "trainer": "Shanu"
+    },
+    {
+        "cid": 3,
+        "cname": "JavaScript",
+        "trainer": "JsSir"
+    },
+    {
+        "cid": 4,
+        "cname": "NodeJs",
+        "trainer": "AnuragSir"
+    },
+    {
+        "cid": 5,
+        "cname": "ExpressJs",
+        "trainer": "ShanuSir"
+    }
+]
