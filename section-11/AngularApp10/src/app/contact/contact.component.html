@@ -1,11 +1,11 @@
 <h3 class="text-primary">Contact Us</h3>
 
+<h3 class="text-success" *ngIf="!isFormSubmited">Thank You! for Contacting with Us.</h3>
 
-
-<form #enquiry="ngForm" action="" method="post">
+<form (ngSubmit)="submitForm()" novalidate #enquiry="ngForm" *ngIf="isFormSubmited">
 
     <!-- {{enquiry.valid}} -->
-
+    
     <!-- <h3>{{enquiry.value | json}}</h3>
     <hr>
     <h3>{{enquiry1 | json}}</h3> -->
@@ -22,7 +22,7 @@
 
 
 
-    <div class="form-group">
+    <div class="form-group mt-3">
         <label for="">Email</label>&nbsp;&nbsp;
         <!-- <span *ngIf="email.valid || (email.invalid && email.touched)">
             <small class="text-danger" *ngIf="email.errors.required">*Email is Required</small>
@@ -37,7 +37,7 @@
     <!-- {{email.invalid}} -->
 
 
-    <div class="form-group">
+    <div class="form-group mt-3">
         <label for="">Mobile</label>&nbsp;&nbsp;
         <!-- <span *ngIf="mobile.errors && (mobile.invalid && mobile.touched)">
             <small class="text-danger" *ngIf="mobile.errors.required">*Mobile Number is Required</small>
@@ -48,7 +48,7 @@
         [class.is-invalid]="mobile.invalid && mobile.touched" 
         class="form-control">
     </div>
-    {{mobile.invalid}}
+    <!-- {{mobile.invalid}} -->
 
 
 

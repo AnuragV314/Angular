@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { Enquiry } from '../enquiry';
 
+import {EnquiryService} from '../enquiry.service'
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
+
+
+  constructor(private enquiryService:EnquiryService){}
+
+
   courses = [
     'Java',
     'Python',
@@ -49,5 +56,17 @@ export class ContactComponent {
     } else {
       this.hasTrainingModeError = false;
     }
+  }
+
+
+
+isFormSubmited:boolean = true;
+
+  submitForm = () =>{
+    this.isFormSubmited = false;
+    console.log(this.enquiry1);
+    this.enquiryService.sendEnquiry(this.enquiry1).
+    subscribe(data=>console.log("Data", data),
+    error=>console.log("Error", error));
   }
 }
