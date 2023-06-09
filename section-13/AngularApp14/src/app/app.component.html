@@ -1,0 +1,64 @@
+<div class="container">
+  <h1 class="text-info mt-3">Angular Components Interaction <p style="color: red; display: inline;"> Part 1</p>
+  </h1>
+  <hr>
+
+  <!-- Interpolation {{}}-->
+  <h3 class="text-success">{{title}}</h3>
+
+
+  <!-- Property Binding [] -->
+
+  <!-- <img src=[imageUrl] alt=""> -->
+  <!-- <img [src]=imageUrl alt=""> -->
+  <!-- <img [src]="imageUrl" alt=""> -->
+  <br>
+
+  <!-- Event Binding ()-->
+  <button (click)="incrementCount()" class="btn btn-secondary mt-3">Increment</button>
+  <br>
+  <h3 class="text-secondary">Button Clicked <p style="color: red; display: inline;">{{count}}</p> Time</h3>
+
+  <br><br>
+
+  <!-- Two-Way Binding -->
+  <div>
+    <h3>First Name: <input [(ngModel)]="fname" /> </h3>
+    <h3>Entered First Name: <p style="color: red; display: inline;">{{fname}}</p>
+    </h3>
+  </div>
+
+  <br><br>
+
+  <!-- Two-Way Binding split -->
+
+  <div>
+    <!-- <h3>Last Name: <input [ngModel]="lname" (ngModelChange)="lname=$event" /> </h3> -->
+    <h3>Last Name: <input [ngModel]="lname" (ngModelChange)="greet($event)" /> </h3>
+    <h3>Entered Last Name: <p style="color: red; display: inline;">{{lname}}</p>
+    </h3>
+  </div>
+
+  <br><br>
+
+
+
+  <!-- Getters and Setters-->
+
+  <div>
+    <h3>Email: <input [(ngModel)]="email" /> </h3>
+    <h3>Entered Email: <p style="color: red; display: inline;">{{email}}</p>
+    </h3>
+  </div>
+
+  <br><br>
+
+
+
+  <!-- ViewChild( ) -->
+
+<h4>City: <input #cityRef /> </h4>
+
+
+  <br><br>
+</div>
