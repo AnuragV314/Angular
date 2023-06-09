@@ -1,0 +1,54 @@
+<div class="container">
+  <h1 class="text-info mt-3">Registration Page</h1>
+<hr>
+  <h3 class="text-danger"> {{registrationForm.value | json}}</h3>
+ 
+
+  <form [formGroup]="registrationForm" (ngSubmit)="submitFromData()">
+
+    <div class="form-group mt-3">
+      <label for="">Username</label>
+      <input formControlName="username" type="text" class="form-control">
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="">Email ID</label> 
+      <a (click)="  addAlternatEmail()" class="btn btn-danger btn-sm mx-3 my-1" style="font-size: 10px;">Add Email</a>
+      <input 
+      [class.is-invalid]="email?.invalid && email?.touched"
+      formControlName="email" type="email" class="form-control">
+
+      <small class="text-danger" [class.d-none]="email?.valid || email?.touched">
+        *Email is Required</small>
+
+        <div class="form-group mt-3"
+        formArrayName="alternateEmail" *ngFor="let email Of alternateEmail.controls; let i = index">
+              <input type="text" [formControlName]="i" class="form-control" placeholder="Enter Alternate Email {{i+1}}">
+        </div>
+
+    </div>
+
+    <div class="form-check mt-3">
+      <input formControlName="subscribe" type="checkbox" class="form-check-input">
+      <label for="">Send me promotional offers</label>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="">Password</label>
+      <input formControlName="password" type="password" class="form-control">
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="">Confirm Password</label>
+      <input formControlName="confirmpassword" type="password" class="form-control">
+    </div>
+
+    <div class="form-group mt-3">
+      <button class="btn btn-success">Register</button>
+    </div>
+
+
+  </form>
+
+
+</div>
