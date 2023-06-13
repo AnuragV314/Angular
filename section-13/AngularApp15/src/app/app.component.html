@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="text-info mt-3">Angular Components Interaction <p style="color: red; display: inline;"> Part 2</p>
+  </h1>
+  <hr>
+  <h2 class="text-danger mt-3">Parent compenent : </h2>
+<hr>
+<button (click)="userLoggedIn = true" class="btn btn-success my-3">Login</button> &nbsp; 
+<button (click)="userLoggedIn = false" class="btn btn-danger my-3">Logout</button>
+<child [loggedIn]="userLoggedIn"></child>
+
+
+
+
+</div>
