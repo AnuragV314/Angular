@@ -1,0 +1,33 @@
+<div class="container">
+  <!-- <h1>Calling External API In Angular-8 using PUT, PATCH, DELETE Http Request Methods</h1> -->
+  <h1>{{title}}</h1>
+  <hr>
+
+  <h2 class="text-info">https://jsonplaceholder.typicode.com/posts</h2>
+  <br>
+  <h3>PUT Request Method =></h3>
+  <div class="container">
+    <ul class="list-group">
+      <li class="list-group-item">ID: {{putPost?.id}}</li>
+      <li class="list-group-item">USER ID: {{putPost?.userId}}</li>
+      <li class="list-group-item">TITLE: {{putPost?.title}}</li>
+      <li class="list-group-item">BODY: {{putPost?.body}}</li>
+    </ul>
+  </div>
+  <br>
+  <h3>PATCH Request Method =></h3>
+  <div class="container">
+    <ul class="list-group">
+      <li class="list-group-item">ID: {{patchPost?.id}}</li>
+      <li class="list-group-item">USER ID: {{patchPost?.userId}}</li>
+      <li class="list-group-item">TITLE: {{patchPost?.title}}</li>
+      <li class="list-group-item">BODY: {{patchPost?.body}}</li>
+    </ul>
+  </div>
+  <br>
+  <h3>DELETE Request Method =></h3>
+  <div class="container my-3">
+    <p class="text-danger">{{message}}</p>
+  </div>
+
+</div>
