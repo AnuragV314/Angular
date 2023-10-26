@@ -1,0 +1,20 @@
+Angular===>
+
+ng serve
+ng serve --open
+ng serve -o
+
+listens on port on:4200
+ng serve -o --port=300
+listens on port 3000
+
+
+
+Tomcat===>
+	     (to build application)
+ng build -->  * Development Build
+ng build --configuration production -->  * Production Build -->Deploying application in server
+				  
+				  
+				  
+
